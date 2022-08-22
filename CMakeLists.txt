@@ -3,6 +3,7 @@ project(Aoiro_core)
 
 # set(CMAKE_CXX_STANDARD 17)
 # set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_BUILD_TYPE Debug)
 message("CMAKE BUILD TYPE IS: ${CMAKE_BUILD_TYPE}")
 
 find_package(glfw3 REQUIRED)
@@ -27,4 +28,4 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE glfw)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE GLEW::GLEW)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE glad::glad)
 
-target_compile_features(${CMAKE_PROJECT_NAME} PRIVATE cxx_std_17)
+target_compile_features(${CMAKE_PROJECT_NAME} PRIVATE cxx_std_20)
