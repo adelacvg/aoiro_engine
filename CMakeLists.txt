@@ -16,7 +16,7 @@ file(GLOB_RECURSE SRC_FILES
         "${PROJECT_SOURCE_DIR}/src/*.cc"
         "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
-
+# message("SRC FILES ARE: ${SRC_FILES}")
 # add_executable(Aoiro_core main.cpp)
 # set(SOURCE_FILES main.cpp)
 message("FILES ARE: ${SRC_FILES}")
