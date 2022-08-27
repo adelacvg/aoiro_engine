@@ -77,6 +77,9 @@ namespace aoiro
         void window_resize(GLFWwindow* window, int width,int height)
         {
             glViewport(0,0,width,height);
+            Window* win = (Window *)glfwGetWindowUserPointer(window);
+            win->m_width=width;
+            win->m_height=height;
         }
         void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
         {

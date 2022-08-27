@@ -4,18 +4,6 @@ namespace aoiro
 {
     namespace maths
     {
-        vec3::vec3()
-        {
-            x=0.0f;
-            y=0.0f;
-            z=0.0f;
-        }
-        vec3::vec3(const float& x,const float& y,const float& z)
-        {
-            this->x=x;
-            this->y=y;
-            this->z=z;
-        }
         vec3& vec3::add(const vec3& other)
         {
             x+=other.x;

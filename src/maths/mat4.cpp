@@ -104,7 +104,7 @@ namespace aoiro
         {
             mat4 result;
 
-            float r=toRadians(angle);
+            float r=toRadians(-angle);
             float c=cos(r);
             float s=sin(r);
             float omc=1.0f-c;

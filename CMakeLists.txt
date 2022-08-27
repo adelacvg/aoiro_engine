@@ -29,3 +29,26 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE GLEW::GLEW)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE glad::glad)
 
 target_compile_features(${CMAKE_PROJECT_NAME} PRIVATE cxx_std_20)
+
+
+add_custom_command(
+  TARGET ${CMAKE_PROJECT_NAME}
+  POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different
+  "${PROJECT_SOURCE_DIR}/src/shaders/basic.vert"
+  "$<TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>/src/shaders/basic.vert"
+)
+add_custom_command(
+  TARGET ${CMAKE_PROJECT_NAME}
+  POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different
+  "${PROJECT_SOURCE_DIR}/src/shaders/basic.frag"
+  "$<TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>/src/shaders/basic.frag"
+)
+# add_custom_command(
+#   TARGET ${CMAKE_PROJECT_NAME}
+#   POST_BUILD
+#   COMMAND ${CMAKE_COMMAND} -E copy_directory
+#   "${PROJECT_SOURCE_DIR}/src/shaders"
+#   "$<TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>/src/shaders"
+# )
