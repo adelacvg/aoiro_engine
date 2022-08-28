@@ -5,6 +5,11 @@ project(Aoiro_core)
 # set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_BUILD_TYPE Debug)
 message("CMAKE BUILD TYPE IS: ${CMAKE_BUILD_TYPE}")
+# set(CMAKE_GENERATOR "MINGW Makefiles")
+# set(CMAKE_TOOLCHAIN_FILE "D:/vcpkg/scripts/buildsystems/vcpkg.cmake")
+# set(CMAKE_CXX_COMPILER "C:/Program Files/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe")
+# set(CMAKE_C_COMPLIER "C:/Program Files/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe")
+
 
 find_package(glfw3 REQUIRED)
 find_package(GLEW REQUIRED)
